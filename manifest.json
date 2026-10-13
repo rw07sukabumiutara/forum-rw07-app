@@ -1,0 +1,25 @@
+{
+  "id": "./",
+  "name": "Forum RW 07 Sukabumi Utara",
+  "short_name": "Forum RW 07",
+  "description": "Berita, pengumuman, jadwal kegiatan, dan informasi warga RW 07 Sukabumi Utara, Jakarta Barat.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#eaf6ff",
+  "theme_color": "#064b91",
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

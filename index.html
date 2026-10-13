@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#064b91">
+  <meta name="description" content="Akses berita, pengumuman, dan kegiatan Forum RW 07 Kelurahan Sukabumi Utara, Jakarta Barat.">
+  <title>Forum RW 07 Sukabumi Utara</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <style>
+    :root { color-scheme: light; --blue:#064b91; --gold:#ffcf32; --red:#d62828; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:linear-gradient(160deg,#eaf6ff,#fff9df); color:#123; }
+    header { background:var(--blue); color:white; padding:28px 18px 34px; text-align:center; border-bottom:6px solid var(--gold); }
+    .logo { width:104px; height:104px; object-fit:contain; background:white; border-radius:26px; padding:6px; box-shadow:0 5px 18px #001d3d55; }
+    h1 { margin:12px 0 5px; font-size:clamp(1.5rem,5vw,2rem); line-height:1.15; }
+    header p { margin:0; opacity:.95; }
+    main { max-width:680px; margin:-16px auto 0; padding:0 16px 28px; }
+    .card { background:white; border-radius:20px; padding:22px; box-shadow:0 8px 28px #1231; }
+    .primary { display:block; background:var(--red); color:white; font-weight:800; text-align:center; text-decoration:none; padding:16px 18px; border-radius:14px; font-size:1.05rem; }
+    .primary:focus,.primary:hover { filter:brightness(.95); }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:14px; }
+    .tile { display:block; padding:14px 12px; border:1px solid #d5e5f4; border-radius:14px; text-decoration:none; color:var(--blue); font-weight:700; background:#f7fbff; text-align:center; }
+    .tile span { display:block; font-size:1.5rem; margin-bottom:5px; }
+    .note { color:#4a5c6b; font-size:.9rem; line-height:1.5; }
+    footer { text-align:center; padding:0 18px 26px; font-size:.82rem; color:#526; }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="icons/icon-512.png" alt="Logo Forum RW 07">
+    <h1>Forum RW 07<br>Sukabumi Utara</h1>
+    <p>Kelurahan Sukabumi Utara · Jakarta Barat</p>
+  </header>
+  <main>
+    <section class="card">
+      <h2>Selamat Datang!</h2>
+      <p>Temukan berita kegiatan, pengumuman, jadwal pelayanan, dan informasi warga RW 07 melalui blog resmi kami.</p>
+      <a class="primary" href="https://forumrw07sukabumiutara.blogspot.com/" target="_blank" rel="noopener">🌐 Buka Blog Forum RW 07</a>
+      <div class="grid">
+        <a class="tile" href="https://forumrw07sukabumiutara.blogspot.com/" target="_blank" rel="noopener"><span>📰</span>Berita & Informasi</a>
+        <a class="tile" href="https://forumrw07sukabumiutara.blogspot.com/" target="_blank" rel="noopener"><span>📢</span>Pengumuman</a>
+        <a class="tile" href="https://forumrw07sukabumiutara.blogspot.com/" target="_blank" rel="noopener"><span>🗓️</span>Jadwal Kegiatan</a>
+        <a class="tile" href="https://forumrw07sukabumiutara.blogspot.com/" target="_blank" rel="noopener"><span>🤝</span>Pelayanan Warga</a>
+      </div>
+      <p class="note">Catatan: aplikasi ini menjadi pintu masuk ke blog. Saat blog diperbarui, berita baru tetap tampil di blog seperti biasa. Koneksi internet diperlukan untuk membaca artikel.</p>
+    </section>
+  </main>
+  <footer>Bersama Warga, Membangun RW 07 yang Lebih Baik<br>Forum RW 07 Kelurahan Sukabumi Utara, Jakarta Barat</footer>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./service-worker.js").catch(err => console.log("Service worker belum aktif", err));
+      });
+    }
+  </script>
+</body>
+</html>
